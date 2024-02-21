@@ -1,5 +1,4 @@
 const { fork } = require("child_process")
-const { sign } = require("crypto")
 const cpuCores = require("os").cpus().length
 
 const ERRORS = {
@@ -14,7 +13,6 @@ const ERRORS = {
 
 class MessageQueue {
   constructor() {
-    // create a child process for each 
     this.topics = {}
   }
   
